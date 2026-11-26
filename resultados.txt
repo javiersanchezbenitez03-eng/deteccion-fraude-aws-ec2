@@ -1,0 +1,21 @@
+=== PIPELINE COMPLETO DE CLASIFICACIÓN EN UBUNTU EC2 ===
+Mejores Hiperparámetros Encontrados: {'criterion': 'entropy', 'max_depth': 8, 'n_estimators': 100}
+ROC-AUC promedio en validación cruzada: 0.9263
+
+Matriz de Confusión:
+[[173   6]
+ [  6  15]]
+
+Reporte de Clasificación Completo:
+              precision    recall  f1-score   support
+
+  Normal (0)       0.97      0.97      0.97       179
+  Fraude (1)       0.71      0.71      0.71        21
+
+    accuracy                           0.94       200
+   macro avg       0.84      0.84      0.84       200
+weighted avg       0.94      0.94      0.94       200
+
+Métrica ROC-AUC Score: 0.8319
+
+-> Modelo y escalador guardados exitosamente como archivos '.pkl'.
