@@ -44,9 +44,27 @@ Aplicar técnicas de preparación de datos, validación cruzada, optimización d
 
 ## Resultados obtenidos
 
-- Recall de Fraude (1): [valor]
-- ROC-AUC Score: [valor]
-- Mejores hiperparámetros: [valores]
+| Métrica | Resultado |
+|---|---:|
+| Recall de Fraude (1) | 71.43% |
+| Precision de Fraude (1) | 0.71 |
+| F1-score de Fraude (1) | 0.71 |
+| Accuracy | 94% |
+| ROC-AUC de prueba | 0.8319 |
+| ROC-AUC de validación cruzada | 0.9263 |
+
+### Mejores hiperparámetros encontrados
+
+- criterion: entropy
+- max_depth: 8
+- n_estimators: 100
+
+### Matriz de confusión
+
+- 173 transacciones normales clasificadas correctamente.
+- 6 transacciones normales clasificadas como fraude.
+- 6 transacciones fraudulentas no detectadas.
+- 15 transacciones fraudulentas detectadas correctamente.
 
 ## Instalación y ejecución
 
@@ -68,8 +86,6 @@ Ejecutar el programa:
 
 ## Conclusión personal
 
-Durante esta práctica aprendí a implementar y optimizar un modelo de Machine Learning en AWS EC2.
+Durante esta práctica aprendí a implementar y optimizar un modelo de Machine Learning utilizando Random Forest dentro de una instancia Ubuntu en AWS EC2.
 
-El modelo obtuvo un Recall de [valor], logrando detectar el [porcentaje]% de los fraudes reales, y un ROC-AUC Score de [valor], que permite evaluar su capacidad de clasificación.
-
-La serialización del modelo y del escalador facilita su reutilización en futuros proyectos, permitiendo almacenarlos en AWS S3 o integrarlos en una API de predicción sin necesidad de repetir el entrenamiento.
+De acuerdo con los resultados obtenidos, el modelo alcanzó un Recall del 71.43% en la clase Fraude (1), lo que significa que logró detectar correctamente 15 de las 21 transacciones fraudulentas. Sin embargo, quedaron 6 fraudes sin detectar, por lo que considero que todavía existe margen de mejora.
